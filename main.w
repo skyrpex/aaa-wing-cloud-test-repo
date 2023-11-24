@@ -10,7 +10,7 @@ interface Storage {
 class BucketStorage impl Storage {
     bucket: cloud.Bucket;
 
-    init() {
+    new() {
         this.bucket = new cloud.Bucket();
     }
 
@@ -35,7 +35,7 @@ class TableStorage impl Storage {
     table: ex.Table;
     topic: cloud.Topic;
 
-    init() {
+    new() {
         this.table = new ex.Table(
             name: "files",
             primaryKey: "key",
@@ -71,7 +71,7 @@ class FileProcessor {
     uploads: Storage;
     processed: Storage;
 
-    init(uploads: Storage, processed: Storage) {
+    new(uploads: Storage, processed: Storage) {
         this.uploads = uploads;
         this.processed = processed;
 
