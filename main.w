@@ -1,10 +1,10 @@
 bring cloud;
 
 interface Storage {
-    inflight put(key: str, contents: str);
+    inflight put(key: str, contents: str): void;
     inflight get(key: str): str;
 
-    onCreate(callback: inflight (str): void);
+    onCreate(callback: inflight (str): void): void;
 }
 
 class BucketStorage impl Storage {
