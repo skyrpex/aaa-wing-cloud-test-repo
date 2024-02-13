@@ -107,5 +107,5 @@ processor.onFileProcessed(inflight (key) => {
 });
 
 new cloud.Function(inflight () => {
-    processor.put("hello", "world");
+    processor.put("hello", "world!");
 });
