@@ -109,3 +109,6 @@ processor.onFileProcessed(inflight (key) => {
 new cloud.Function(inflight () => {
     processor.put("hello", "world?");
 });
+
+let api = new cloud.Api();
+new cloud.Endpoint(api.url);
