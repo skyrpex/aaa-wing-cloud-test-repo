@@ -111,4 +111,3 @@ new cloud.Function(inflight () => {
 });
 
 let api = new cloud.Api();
-new cloud.Endpoint(api.url);
